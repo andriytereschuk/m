@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  overflow: 0;
+  border: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #ececec;
+  font-size: 14px;
+}
+
+img {
+  box-shadow: 0 0 42px 20px rgba(146, 118, 71, 0.9);
+  filter: blur(32px);
+  opacity: 0;  
+}
+
+.anim {
+  animation: blur ease 5s forwards, op ease .1s forwards;
+}
+
+.btn {
+  display: block;
+  border-radius: 100%;
+  background-color: #22611e;
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+  transition: opacity ease .1s;
+  opacity: 1;
+  animation: pulse 1s ease-in infinite alternate;
+}
+
+@keyframes pulse {
+  0%   {
+    box-shadow: 0 0 0 0 #22611e;
+  }
+  100% {
+    box-shadow: 0 0 0 10px #22611e;
+  }
+}
+
+@keyframes blur {
+  0%   {
+    filter: blur(32px);
+  }
+  100% {
+    filter: blur(0px); 
+  }
+}
+
+@keyframes op {
+  0%   {
+    opacity: 0;    
+  }
+  100% {
+    opacity: 1;  
+  }
+}
+
+.hide {
+  opacity: 0;
+}
+
+.bg {
+  background: linear-gradient(to right, #6d3214 0%,#fcf3b7 100%);
+}
