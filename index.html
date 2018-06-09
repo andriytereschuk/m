@@ -19,7 +19,8 @@
         $('img').addClass('anim');
         $('body').addClass('bg');
         setTimeout(() => {
-          $('body').append('<iframe style="opacity: 0; position: fixed;" width="560" height="315" src="https://www.youtube.com/embed/rQ7tMWOCQlM?start=40?autoplay=1&cc_load_policy=1" frameborder="0" allow="autoplay; encrypted-media"></iframe>');
+          $('body').append('<iframe style="opacity: 0; position: fixed;" width="560" height="315" src="https://www.youtube.com/embed/rQ7tMWOCQlM?start=40" frameborder="0" allowfullscreen></iframe>');
+          $("iframe")[0].src += "&autoplay=1";
         }, 4500);
       });
     });
